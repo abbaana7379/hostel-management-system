@@ -1,0 +1,67 @@
+<div class="page-content">
+  <div class="page-header">
+    <div>
+      <h1>Complaint Management</h1>
+      <p>Track and resolve maintenance complaints</p>
+    </div>
+    <button class="btn btn-primary" id="addComplaintBtn">
+      <i class="fas fa-plus"></i> New Complaint
+    </button>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="Open">Open</button>
+    <button class="filter-btn" data-filter="In Progress">In Progress</button>
+    <button class="filter-btn" data-filter="Resolved">Resolved</button>
+  </div>
+
+  <div class="complaints-list" id="complaintsList">
+    <!-- Complaints will be loaded here -->
+  </div>
+</div>
+
+<div id="complaintModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="complaintModalTitle">New Complaint</h2>
+      <button class="close-btn" data-modal="complaintModal">&times;</button>
+    </div>
+    <form id="complaintForm" class="form-grid">
+      <div class="form-group">
+        <label>Student *</label>
+        <select name="student" id="complaintStudentSelect" required>
+          <option value="">Select student</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Complaint Type *</label>
+        <select name="type" required>
+          <option value="">Choose type</option>
+          <option>Plumbing</option>
+          <option>Electrical</option>
+          <option>Cleaning</option>
+          <option>Furniture</option>
+          <option>Internet</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group full-width">
+        <label>Details *</label>
+        <textarea name="details" placeholder="Describe the issue in detail" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Priority</label>
+        <select name="priority">
+          <option value="Normal">Normal</option>
+          <option value="High">High</option>
+          <option value="Urgent">Urgent</option>
+        </select>
+      </div>
+      <div class="form-actions">
+        <button type="reset" class="btn btn-outline">Cancel</button>
+        <button type="submit" class="btn btn-primary">Submit Complaint</button>
+      </div>
+    </form>
+  </div>
+</div>

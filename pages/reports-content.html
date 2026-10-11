@@ -1,0 +1,81 @@
+<div class="page-content">
+  <div class="page-header">
+    <div>
+      <h1>Reports & Analytics</h1>
+      <p>Generate and view hostel management reports</p>
+    </div>
+    <button class="btn btn-primary" id="generateReportBtn">
+      <i class="fas fa-download"></i> Download Report
+    </button>
+  </div>
+
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-label">Occupancy Rate</p>
+        <h3 class="stat-value" id="occupancyRate">0%</h3>
+        <small class="stat-meta">Rooms filled</small>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-label">Fee Collection</p>
+        <h3 class="stat-value" id="feeCollectionRate">0%</h3>
+        <small class="stat-meta">Amount collected</small>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-label">Avg Complaints</p>
+        <h3 class="stat-value" id="avgComplaints">0</h3>
+        <small class="stat-meta">Per month</small>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-label">Total Visitors</p>
+        <h3 class="stat-value" id="totalVisitors">0</h3>
+        <small class="stat-meta">This month</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="report-sections">
+    <div class="card">
+      <div class="card-header">
+        <h3>Monthly Summary</h3>
+      </div>
+      <div class="card-body">
+        <div class="report-summary" id="reportSummary">
+          <div class="summary-item">
+            <span>Total Students</span>
+            <strong id="reportTotalStudents">0</strong>
+          </div>
+          <div class="summary-item">
+            <span>Active Rooms</span>
+            <strong id="reportActiveRooms">0</strong>
+          </div>
+          <div class="summary-item">
+            <span>Revenue Generated</span>
+            <strong id="reportRevenue">₹0</strong>
+          </div>
+          <div class="summary-item">
+            <span>Resolved Complaints</span>
+            <strong id="reportResolved">0</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>System Insights</h3>
+      </div>
+      <div class="card-body">
+        <ul class="insights-list" id="insightsList">
+          <li>System loading...</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

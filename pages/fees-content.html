@@ -1,0 +1,99 @@
+<div class="page-content">
+  <div class="page-header">
+    <div>
+      <h1>Fee Management</h1>
+      <p>Track and manage student fee payments</p>
+    </div>
+    <button class="btn btn-primary" id="addFeeBtn">
+      <i class="fas fa-plus"></i> Add Fee Record
+    </button>
+  </div>
+
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-label">Total Collected</p>
+        <h3 class="stat-value" id="totalCollected">₹0</h3>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-label">Pending Amount</p>
+        <h3 class="stat-value text-warning" id="pendingAmount">₹0</h3>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-content">
+        <p class="stat-label">Collection Rate</p>
+        <h3 class="stat-value" id="collectionRate">0%</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <h3>Fee Records</h3>
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input type="text" id="feeSearch" placeholder="Search by student name..." />
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Month</th>
+              <th>Amount</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="feesTable">
+            <tr>
+              <td colspan="5" class="text-center text-muted">No fee records found</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="feeModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="feeModalTitle">Add Fee Record</h2>
+      <button class="close-btn" data-modal="feeModal">&times;</button>
+    </div>
+    <form id="feeForm" class="form-grid">
+      <div class="form-group">
+        <label>Student *</label>
+        <select name="student" id="feeStudentSelect" required>
+          <option value="">Select student</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Month *</label>
+        <input type="month" name="month" required />
+      </div>
+      <div class="form-group">
+        <label>Amount (₹) *</label>
+        <input type="number" name="amount" min="0" placeholder="6500" required />
+      </div>
+      <div class="form-group">
+        <label>Status *</label>
+        <select name="status" required>
+          <option value="Paid">Paid</option>
+          <option value="Pending">Pending</option>
+          <option value="Partial">Partial</option>
+        </select>
+      </div>
+      <div class="form-actions">
+        <button type="reset" class="btn btn-outline">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save Record</button>
+      </div>
+    </form>
+  </div>
+</div>

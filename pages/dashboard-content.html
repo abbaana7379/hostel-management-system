@@ -1,0 +1,132 @@
+<div class="page-content">
+  <div class="page-header">
+    <div>
+      <h1>Dashboard Overview</h1>
+      <p>Welcome to the Hostel Management System</p>
+    </div>
+    <button class="btn btn-primary" id="refreshDashboard">
+      <i class="fas fa-sync-alt"></i> Refresh
+    </button>
+  </div>
+
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="stat-icon primary">
+        <i class="fas fa-users"></i>
+      </div>
+      <div class="stat-content">
+        <p class="stat-label">Total Students</p>
+        <h3 class="stat-value" id="totalStudents">0</h3>
+        <small class="stat-meta">Active residents</small>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon success">
+        <i class="fas fa-door-open"></i>
+      </div>
+      <div class="stat-content">
+        <p class="stat-label">Rooms Occupied</p>
+        <h3 class="stat-value" id="occupiedRooms">0</h3>
+        <small class="stat-meta">of 12 rooms</small>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon warning">
+        <i class="fas fa-money-bill"></i>
+      </div>
+      <div class="stat-content">
+        <p class="stat-label">Pending Fees</p>
+        <h3 class="stat-value" id="dueFees">0</h3>
+        <small class="stat-meta">Outstanding payments</small>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon danger">
+        <i class="fas fa-exclamation-circle"></i>
+      </div>
+      <div class="stat-content">
+        <p class="stat-label">Open Complaints</p>
+        <h3 class="stat-value" id="openComplaints">0</h3>
+        <small class="stat-meta">Needs attention</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-grid">
+    <div class="card">
+      <div class="card-header">
+        <h3>Recent Students</h3>
+        <a href="#" class="link-primary" data-page="students">View All</a>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Room</th>
+                <th>Fee Status</th>
+              </tr>
+            </thead>
+            <tbody id="recentStudents">
+              <tr>
+                <td colspan="3" class="text-center text-muted">No students yet</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Occupancy Status</h3>
+      </div>
+      <div class="card-body">
+        <div class="occupancy-chart" id="occupancyChart">
+          <div class="chart-stat">
+            <span class="chart-label">Occupied</span>
+            <span class="chart-value success" id="occupancyPercentage">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill success" id="occupancyBar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Recent Complaints</h3>
+        <a href="#" class="link-primary" data-page="complaints">View All</a>
+      </div>
+      <div class="card-body">
+        <ul class="list" id="recentComplaints">
+          <li class="list-item text-muted">No complaints</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Fee Collection Status</h3>
+      </div>
+      <div class="card-body">
+        <div class="fee-status">
+          <div class="fee-item">
+            <span>Paid</span>
+            <strong id="feesPaid" class="text-success">0</strong>
+          </div>
+          <div class="fee-divider"></div>
+          <div class="fee-item">
+            <span>Pending</span>
+            <strong id="feesPending" class="text-warning">0</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
